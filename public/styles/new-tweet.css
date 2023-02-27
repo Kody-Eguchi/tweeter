@@ -1,0 +1,42 @@
+section h2 {
+  padding: 0 1.5rem;
+}
+
+section form {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+section form label {
+  font-family: sans-serif;
+  font-size: 1.3rem;
+}
+
+section form textarea {
+  outline: none;
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: 3px solid black;
+  
+  
+}
+
+section form div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section form div button {
+  background-color: #4056A1;
+  font-family: Bungee, sans-serif;
+  color: white;
+  
+  border:none;
+  padding: 0.5rem;
+}
+
+section form div output {
+  margin: 1.5rem;
+}
