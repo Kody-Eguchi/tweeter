@@ -1,4 +1,4 @@
-header {
+#main-header {
   padding-top: 130px;
   height: 530px;
   width: 100%;
@@ -11,7 +11,7 @@ header {
 
 }
 
-header h2 {
+#main-header h2 {
   color: white;
   /* font-family: sans-serif; */
   font: normal;
