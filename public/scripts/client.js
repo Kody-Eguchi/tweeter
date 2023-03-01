@@ -9,10 +9,7 @@ $(document).ready(function() {
     const {name, avatars, handle} = data.user;
     const {text} = data.content;
     const {created_at} = data;
-    const createdDate = new Date(created_at);
-    const currentDate = new Date();
-    const diffTime = Math.abs(currentDate - createdDate);
-    const days = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+    const days = timeago.format(created_at); 
 
     return `
       <article>
@@ -27,7 +24,7 @@ $(document).ready(function() {
           ${text}
         </div>
         <footer>
-          <p>${days} days ago</p>
+          <p>${days}</p>
           <div class="icon-container">
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
@@ -39,22 +36,34 @@ $(document).ready(function() {
 
   const renderTweets = function(tweets) {
 
-
     for (const tweet of tweets) {
       const $element = createTweetElement(tweet);
       $('#tweets-container').append($element);
     }
   }
 
+  //Form Submit Handler
   $( "form" ).on( "submit", function( event ) {
     event.preventDefault();
-    const serialized = $( this ).serialize();
 
+    if ($('#tweet-text').val().length < 1) {
+      alert('your input is empty');
+      return;
+    }
+
+    if ($('#tweet-text').val().length > 140) {
+      alert('Maximum chractors exceeded');
+      return;
+    }
+
+    const serialized = $(this).serialize();
+    
     $.ajax({
       type: "POST",
       url: `/tweets`,
       data: serialized,
     });
+
   });
 
   const loadtweets = function() {
