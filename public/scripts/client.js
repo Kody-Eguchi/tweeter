@@ -27,7 +27,7 @@ const createTweetElement = function(data) {
         ${text}
       </div>
       <footer>
-        <p>${days}days ago</p>
+        <p>${days} days ago</p>
         <div class="icon-container">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
@@ -41,11 +41,14 @@ const renderTweets = function(tweets) {
 
 
   for (const tweet of tweets) {
-    console.log(tweet);
-    const element = createTweetElement(tweet);
-    $('#tweets-container').append(element);
+    const $element = createTweetElement(tweet);
+    $('#tweets-container').append($element);
   }
 }
+
+
+
+
 
 // const tweetData = {
 //   "user": {
@@ -58,9 +61,6 @@ const renderTweets = function(tweets) {
 //     },
 //   "created_at": 1461116232227
 // }
-
-
-
 
 const tweetData = [
   {
@@ -87,11 +87,25 @@ const tweetData = [
   }
 ];
 
-// const $tweet = createTweetElement(tweetData);
-
-// console.log($tweet);
-// $('#tweets-container').append($tweet);
 
 renderTweets(tweetData);
+
+// $('#submit-btn').click( event => {
+//   event.preventDefault();
+//   console.log( $( this ).serialize() );
+// });
+
+$( "form" ).on( "submit", function( event ) {
+  event.preventDefault();
+  const serialized = $( this ).serialize();
+
+
+  $.ajax({
+    type: "POST",
+    url: `/tweets`,
+    data: serialized,
+  });
+});
+
 
 });
