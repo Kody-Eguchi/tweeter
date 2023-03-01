@@ -46,13 +46,24 @@ $(document).ready(function() {
   $( "form" ).on( "submit", function( event ) {
     event.preventDefault();
 
+
+    $('#char-limit-alert').slideUp();
+    $('#empty-input-alert').slideUp();
+
     if ($('#tweet-text').val().length < 1) {
-      alert('your input is empty');
+      //used setTimeout for smooth transtion from other error message
+      setTimeout(() => {
+        $('#empty-input-alert').slideDown()
+      }, 500)
+      ;
       return;
     }
 
     if ($('#tweet-text').val().length > 140) {
-      alert('Maximum chractors exceeded');
+      //used setTimeout for smooth transtion from other error message
+      setTimeout(() => {
+        $('#char-limit-alert').slideDown();
+      }, 500)
       return;
     }
 
@@ -81,5 +92,8 @@ $(document).ready(function() {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
+
+  $('#char-limit-alert').hide();
+  $('#empty-input-alert').hide();
 
 });

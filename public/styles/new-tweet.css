@@ -40,3 +40,16 @@ section form div button {
 section form div output {
   margin: 1.5rem;
 }
+
+/* Alert Message */
+#alert-container {
+  margin: 2rem auto;
+  height: 70px;
+}
+
+#char-limit-alert, #empty-input-alert {
+  color:red;
+  text-align: center;
+  border: 2px solid red;
+  margin-top: 1rem;
+}

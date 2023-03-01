@@ -65,6 +65,15 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
+      <div id="alert-container">
+        <div id="char-limit-alert">
+          <p>Error: maximum is 140 chracters</p>
+        </div>
+        <div id="empty-input-alert">
+          <p>Error: input area is empty</p>
+        </div>
+      </div>
+
       <h2>Compose Tweet</h2>
       <form method="POST" action="/tweets">
         <label for="tweet-text">What are you humming about?</label>
