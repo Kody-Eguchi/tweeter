@@ -21,7 +21,7 @@ $(document).ready(function() {
           <p>${handle}</p>
         </header>
         <div class="tweet-content">
-          ${text}
+          ${escape(text)}
         </div>
         <footer>
           <p>${days}</p>
@@ -38,7 +38,7 @@ $(document).ready(function() {
 
     for (const tweet of tweets) {
       const $element = createTweetElement(tweet);
-      $('#tweets-container').append($element);
+      $('#tweets-container').prepend($element);
     }
   }
 
@@ -62,7 +62,7 @@ $(document).ready(function() {
       type: "POST",
       url: `/tweets`,
       data: serialized,
-    });
+    }).then(loadtweets());
 
   });
 
@@ -75,5 +75,11 @@ $(document).ready(function() {
   };
 
   loadtweets();
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
 });
