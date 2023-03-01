@@ -1,11 +1,13 @@
 #tweets-container {
-  border: 3px solid grey;
+  
   background-color: #f4f1ec;
   margin-bottom: 3rem;
 }
 
 #tweets-container article {
   padding: 1.5rem;
+  border: 3px solid grey;
+  margin-bottom: 2rem;
 }
 
 #tweets-container article .tweet-content{
