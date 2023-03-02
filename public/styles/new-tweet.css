@@ -18,11 +18,9 @@ section form textarea {
   background-color: #f4f1ec;
   border: none;
   border-bottom: 3px solid black;
-  
-  
 }
 
-section form div{
+section form div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,8 +30,7 @@ section form div button {
   background-color: #4056A1;
   font-family: Bungee, sans-serif;
   color: white;
-  
-  border:none;
+  border: none;
   padding: 0.5rem;
 }
 
@@ -48,7 +45,7 @@ section form div output {
 }
 
 #char-limit-alert, #empty-input-alert {
-  color:red;
+  color: red;
   text-align: center;
   border: 2px solid red;
   margin-top: 1rem;
@@ -69,17 +66,12 @@ section form div output {
   bottom: 0;
   right: 0;
   text-decoration: none;
-
 }
-
 #scrollUp-wrapper:hover {
   cursor: pointer;
 }
 
 .fa-angles-up {
-  
   font-size: 3rem;
   color: white;
-  
-  
 }

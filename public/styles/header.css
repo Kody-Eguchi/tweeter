@@ -8,26 +8,42 @@
   justify-content: center;
   background-color: #d69821;
   background-image: url("https://www.transparenttextures.com/patterns/food.png");
-
 }
-
 #main-header h2 {
   color: white;
-  /* font-family: sans-serif; */
   font: normal;
-  
 }
 
 /* Pulsing Animation */
-
-.pulse:hover{ 
+.pulse:hover {
   animation: pulse 1s infinite;
-  animation-timing-function: linear;  
-   cursor: pointer;
+  animation-timing-function: linear;
+  cursor: pointer;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1)};
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  #main-header {
+    margin-left: 3rem;
+    margin-top: 15rem;
+    width: 30%;
+  }
+  main {
+    width: 45%;
+    margin-top: 130px;
+  }
 }
