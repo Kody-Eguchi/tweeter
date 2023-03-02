@@ -16,3 +16,19 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Stetch Project Completed
+- Add a compose button on top-right corner
+- Implemented CSS animation on the compose button
+- Add a scroll to top button
+- the tweet form is hidden by default
+- Convert CSS to SASS
+
+## Final Product
+
+!["screenshot of Desktop Ver."](https://github.com/Kody-Eguchi/tweeter/blob/master/docs/tweet-desktop.png)
+!["screenshot of Mobile Ver."](https://github.com/Kody-Eguchi/tweeter/blob/master/docs/tweet-mobile.png)
+
+
+## Author Info
+!["Koji Eguchi"](https://github.com/Kody-Eguchi) 
