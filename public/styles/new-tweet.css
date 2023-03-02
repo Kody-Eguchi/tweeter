@@ -53,3 +53,33 @@ section form div output {
   border: 2px solid red;
   margin-top: 1rem;
 }
+
+/* Scroll-up Button */
+#scrollUp-wrapper {
+  margin: 1.5rem;
+  background-color: red;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  text-decoration: none;
+
+}
+
+#scrollUp-wrapper:hover {
+  cursor: pointer;
+}
+
+.fa-angles-up {
+  
+  font-size: 3rem;
+  color: white;
+  
+  
+}

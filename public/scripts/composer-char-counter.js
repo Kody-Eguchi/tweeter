@@ -11,8 +11,23 @@ $(document).ready(function() {
 
   });
 
+  $('#scrollUp-wrapper').hide();
 
+  $('#scrollUp-wrapper').on('click', () => {
+    $('#toggle-form').show();
+    $('.new-tweet').slideDown();
+    $('#scrollUp-wrapper').hide();
+  })
+
+  $(window).scroll( () => {
+    if(($('#main-header').position().top - $(window).scrollTop()) === 0) {
+      $('#toggle-form').fadeIn(1000);
+      $('#scrollUp-wrapper').fadeOut(1000);
+    } else {
+      $('#toggle-form').fadeOut(1000);
+      $('#scrollUp-wrapper').fadeIn(1000);
+    }
+    
+  });
   
-  
- 
 });
