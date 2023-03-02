@@ -1,7 +1,7 @@
 #tweets-container {
   
   background-color: #f4f1ec;
-  margin-bottom: 3rem;
+  margin: 2rem auto;
 }
 
 #tweets-container article {

@@ -95,5 +95,10 @@ $(document).ready(function() {
 
   $('#char-limit-alert').hide();
   $('#empty-input-alert').hide();
+  $('.new-tweet').hide();
 
+
+  $('#toggle-form').on('click', ()=>{
+    $('.new-tweet').slideDown();
+  });
 });
