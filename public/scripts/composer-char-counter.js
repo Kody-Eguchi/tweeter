@@ -5,7 +5,9 @@ $(document).ready(function() {
     let charCount = $('#tweet-text').val().length;
     let counter = 140 - charCount;
     if (counter < 0) {
-      $('#counter').css('color',"red");
+      $('#counter').addClass('red-letter');
+    } else {
+      $('#counter').removeClass('red-letter');
     }
     $('#counter').html(counter);
 
