@@ -78,8 +78,16 @@ $(document).ready(function() {
   });
 
   const loadtweets = function() {
-    $.ajax('/tweets', {method: 'GET'})
-    .then((tweetJson) => {
+    $.ajax({
+      url:'/tweets',
+      method: 'GET',
+      success: () => {
+        console.log("Successfully loaded tweets");
+      }
+    })
+    .done((tweetJson) => {
+      $("#tweet-text").empty();
+      $("#tweet-text").val('');
       renderTweets(tweetJson);
     });
     
