@@ -73,7 +73,10 @@ $(document).ready(function() {
       type: "POST",
       url: `/tweets`,
       data: serialized,
-    }).then(loadtweets());
+    }).then(()=>{
+      $('#counter').html("140");
+      loadtweets();
+      });
 
   });
 
@@ -86,7 +89,7 @@ $(document).ready(function() {
       }
     })
     .done((tweetJson) => {
-      $("#tweet-text").empty();
+      $('#tweets-container').empty();
       $("#tweet-text").val('');
       renderTweets(tweetJson);
     });
